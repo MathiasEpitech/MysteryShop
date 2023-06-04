@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Avis
+{% endblock %}
+
+{% block body %}
+
+	<div class="container py-4">
+
+        <a class="btn btn-sm btn-primary my-3" href="{{ path('app_admin_avis') }}"><i class="fa-solid fa-angle-left"></i> Retour</a>
+
+        <h2 class="text-center text-white bg-primary col-md-7 col-lg-7 py-4 mx-auto my-2">Edit Avis</h2>
+
+        {{ form_start(form, {'attr': { 'class' : 'col-md-7 col-lg-5 mx-auto' } }) }}
+
+            {{ form_row(form.auteur) }}
+
+            {{ form_row(form.commentaire) }}
+
+            <button type="submit" class="btn btn-primary">Poster</button>
+
+        {{ form_end(form) }}
+
+
+    </div>
+{% endblock %}

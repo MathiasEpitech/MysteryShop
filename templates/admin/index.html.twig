@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+
+<div class="container py-4 justify-content-center">
+
+    <h2 class="text-center text-white bg-dark border border-success col-md-7 col-lg-7 py-3 mx-auto my-2 rounded">BACK-OFFICE</h2>
+
+    <div class="col-md-7 col-lg-7 py-1 mx-auto my-2">
+
+        <ul class="list-group text-center mx-auto py-2 m-5">
+
+            <li class="list-group-item"><a href="{{ path("app_admin_produits") }}" class="btn btn-outline-success">Gestion des produits</a></li>
+
+            <li class="list-group-item"><a href="{{ path("app_admin_cat_index") }}" class="btn btn-outline-success">Gestion des categories</a></li>
+
+            <li class="list-group-item"><a href="{{ path("app_admin_user") }}" class="btn btn-outline-success">Gestion des utilisateurs</a></li>
+
+            <li class="list-group-item"><a href="{{ path("app_admin_avis") }}" class="btn btn-outline-success">Gestion des commentaires</a></li>
+
+        </ul>
+
+    </div>
+
+</div>
+{% endblock %}

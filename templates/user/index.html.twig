@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+
+<div class="container d-flex justify-content-center py-4">
+
+    <div class="col-xl-9 g-1 mx-auto my-4 py-4">
+
+        <h1>Hello {{ app.user.prenom }}! ✅</h1>
+        
+        <h4 class="text-center text-white bg-primary col-md-7 col-lg-7 py-2 mx-auto my-5">Mon profile</h4>
+
+        <div class="card shadow-sm">
+
+            <h3 class="title text-center p-1">
+                {{ app.user.prenom }} {{ app.user.nom}}
+            </h3>
+
+            <div class="card-body">
+
+                <p class="card-text">{{ app.user.email }}</p>
+
+                <p class="text-center fs-2 fw-bold">{{ app.user.adresse}}</p>
+                <p class="text-center fs-2 fw-bold">{{ app.user.codePostal}} {{ app.user.ville}}</p>
+                <p class="text-center fs-2 fw-bold">{{ app.user.pays}}</p>
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <div class="btn-group py-2 p-4">
+
+                        <a class="btn btn-lg btn-outline-danger" href="">Modifier </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <h4 class="text-center text-white bg-primary col-md-7 col-lg-7 py-2 mx-auto my-5">Mes commandes</h4>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Gestion des produits{% endblock %}
+
+{% block body %}
+
+
+
+<div class="container py-4 justify-content-center">
+
+	<h2 class="text-center text-white bg-dark border border-success col-md-7 col-lg-7 py-3 mx-auto my-2 rounded">Gestion des produits</h2>
+
+    <div class="text-center m-2">
+        <a href="{{ path("app_admin_produit_ajouter") }}" class="btn btn-lg text-white bg-dark border border-success py-2 my-2 ">Ajouter un produit</a>
+    </div>
+
+
+	<div class="mx-auto my-2">
+
+		<div class="table table-striped table-reponsive-sm col-md-7 col-lg-5 col-10 bg-dark border border-light rounded">
+
+			<h3 class="text-center mx-auto my-2"> <i class="fa-solid fa-magnifying-glass"></i> Chercher un produit :</h3>
+
+			<p class="text-center mx-auto my-2">Chercher un produit parmis tous les produits enregistrés en base</p>
+
+			<input class="form-control py-2 my-2 " id="myInput" type="text" placeholder="Chercher...">
+
+			<table class="table table-striped table-reponsive-sm col-md-7 col-lg-4 col-8 my-2">
+            <thead class="table-light mx-2">
+                <tr class="text-center">
+					<th>NOM</th>
+					<th>DESCRIPTION</th>
+					<th>PRIX</th>
+					<th>STOCK</th>
+					<th>ACTION</th>
+                </tr>
+            </thead>
+
+        	{% for produit in produits %}
+
+				<tbody id="myTable" class="align-middle text-center">
+
+					<tr>
+						<td class="">{{produit.nom}}</td>
+						<td class="b">{{produit.description}}</td>
+						<td class="">{{produit.prix}}</td>
+						<td class="">{{produit.stock}}</td>
+						<td class="">
+							<a href="{{ path('app_admin_produit_editer', {'id' : produit.id }) }}" class="btn btn-warning my-1"><i class="fa-solid fa-pen"></i></a>
+							<a onclick="return(confirm('Etes vous certain de vouloir supprimer ce produit ?'))" href="{{ path('app_admin_produit_supp', {'id' : produit.id }) }}" class="btn btn-danger my-1"><i class="fa-solid fa-trash"></i></a>
+							<a href="{{ path('app_detail_produit', {'id' : produit.id }) }}" class="btn btn-info my-1"><i class="fa-solid fa-eye"></i></a>
+						</td>
+							
+					</tr>
+					
+				</tbody>
+
+        	{% endfor %}
+			</table>
+
+		</div>
+
+	</div>
+
+
+</div>
+{% endblock %}
+
+

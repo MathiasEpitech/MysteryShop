@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="container my-4 justify-content-center">
+
+    <a class="btn bg-transparent my-3" href="{{ path('app_produit') }}">
+	    <i class="fa-solid fa-angle-left">
+        </i>
+	    Retour
+    </a>
+
+
+	<h2 class="text-center text-white bg-dark border border-success col-md-7 col-lg-7 py-3 mx-auto my-2 rounded">Tous nos categorie de produits</h2>
+
+    <ul class="list-group fw-bolder mx-auto text-center">
+
+        {% for c in categories %}
+
+            <a href="{{ path("app_categorie_produit", {'id' : c.id}) }}"><li class="list-group-item">{{c.nom}}</li></a>
+            
+        {% endfor %}
+        
+    </ul>
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,91 @@
+
+
+/* *{
+  font-family: 'Montserrat', sans-serif !important;
+} */
+
+body {
+
+  background-image: url("https://assets.bigcartel.com/theme_images/46190633/giphy-5.gif?auto=format&fit=max&h=200&w=200");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+
+}
+
+#logo {
+  width: 250px;
+}
+
+.container-base {
+  min-height: 80vh  !important;
+}
+
+#container {
+  position: relative;
+  width: 90%;
+  background-color: rgb(9, 255, 0);
+}
+
+#image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  margin-left: -15px !important;
+  
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#container:hover .image {
+  opacity: 0.3;
+}
+
+#container:hover .middle {
+  opacity: 1;
+
+}
+
+#titre{
+  color: rgb(0, 255, 0);
+}
+
+#text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+#menu {
+  color: rgb(0, 255, 0);
+}
+
+#bc {
+  color: rgb(255, 0, 0);
+  display: inline-block;
+}
+
+.form-control {
+  color:black;
+}
+
+td.b {
+  white-space: nowrap;
+  width: 100px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: inline-block;
+
+}

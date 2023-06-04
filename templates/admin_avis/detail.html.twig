@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AvisAdminController!
+{% endblock %}
+
+{% block body %}
+
+	<div class="container py-4">
+
+		<a class="btn btn-sm btn-primary my-3" href="{{ path('app_admin_avis') }}">
+			<i class="fa-solid fa-angle-left"></i>
+			Retour</a>
+
+		<h2 class="text-center text-white bg-primary col-md-7 col-lg-7 py-4 mx-auto my-2">Detail avis</h2>
+
+		<table class="table table-striped table-hover text-center">
+
+			<thead class="text-center text-white bg-primary">
+
+				<tr>
+
+					<th>Nom du produit</th>
+					<th>Auteur</th>
+                    <th>Date / Heure </th>
+					<th>Commentaire</th>
+
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+				<tr>
+
+				    <td>{{ avis.produit.nom }}</td>
+					<td>{{ avis.auteur }}</td>
+                    <td>{{avis.createAt|date('d/m/Y')}} / {{avis.createAt|date('H:i:s')}}</td>
+					<td>{{ avis.commentaire }}</td>
+
+				</tr>
+
+			</tbody>
+
+		</table>
+
+	</div>
+{% endblock %}

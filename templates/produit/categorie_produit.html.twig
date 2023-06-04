@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="container my-4 justify-content-center">
+
+    <h2 class="text-center text-white bg-dark border border-success col-md-7 col-lg-7 py-3 mx-auto my-2 rounded">{{ categorie.nom }}</h2>
+
+    <div class="py-5">
+    
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            {% for produit in categorie.produits %}
+
+
+                <div class="">
+
+                    <div class="container" id="container">
+
+						<img src="{{ asset('uploads/images/')}}{{ produit.image }}" alt="Avatar" id="image" class="image bg-light" style="width:107%; margin-bottom: 50px;">
+
+						<div class="middle">
+                            
+
+                            <a class="" href="{{ path('app_detail_produit', { 'id': produit.id} ) }}">
+							<h1 class="text" id="">{{ produit.nom }}</h1>
+
+                            <p class="text-center fs-2 fw-bold">{{ produit.prix}}€</p>
+
+                            </a>
+						</div>
+					</div>
+
+                </div>
+
+            {% endfor %}
+            
+        </div>
+        
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+{% endblock %}

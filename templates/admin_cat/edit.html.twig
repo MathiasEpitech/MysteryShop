@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Categorie
+{% endblock %}
+
+{% block body %}
+
+	<div class="container py-4">
+
+		<h2 class="text-center text-white bg-primary col-md-7 col-lg-7 py-4 mx-auto my-2">Edit Categorie</h2>
+
+		{{ include('admin_cat/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+		<div class="text-center">
+			<a class="btn btn-sm btn-primary" href="{{ path('app_admin_cat_index') }}">Retour</a>
+		</div>
+	</div>
+{% endblock %}

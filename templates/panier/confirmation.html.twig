@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+	<div class="container py-4 justify-content-center">
+
+		<h2 class="text-center text-white bg-dark border border-success col-md-7 col-lg-7 py-3 mx-auto my-2 rounded">Panier index</h2>
+
+        <div class="p-5 bg-dark fw-bolder rounded shadow-lg">
+                <h1 class="display-3">Felicitation !</h1>
+                <p class="lead">Votre commande est enregistrer</p>
+                <hr class="my-2">
+                <p class="lead">
+                    <a class="btn btn-lg text-white bg-dark border border-success py-2 my-2 " href="{{path('app_panier_detail_commande') }}" role="button">Voir details commande</a>
+                </p>
+        </div>
+
+    </div>
+
+
+{% endblock %}
